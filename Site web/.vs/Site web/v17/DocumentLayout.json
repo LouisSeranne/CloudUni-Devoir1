@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lseranne\\Desktop\\SiteWeb\\Site web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DEFF3A56-8C15-452A-8D7F-79FB07DFF7D1}|Site web\\Site web.csproj|c:\\users\\lseranne\\desktop\\siteweb\\site web\\site web\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEFF3A56-8C15-452A-8D7F-79FB07DFF7D1}|Site web\\Site web.csproj|solutionrelative:site web\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\lseranne\\Desktop\\SiteWeb\\Site web\\Site web\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "Site web\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\lseranne\\Desktop\\SiteWeb\\Site web\\Site web\\Pages\\Index.razor",
+              "RelativeToolTip": "Site web\\Pages\\Index.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T16:58:57.103Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
