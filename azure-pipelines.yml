@@ -32,3 +32,17 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure Resource Manager'
+    subscriptionId: 'f8ee07ed-b563-4b27-931f-56bdf1405242'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'Devoir1'
+    location: 'East US'
+    templateLocation: './EnvironmentAzure/Devoir1ResourceGroup/Devoir1ResourceGroup/Deploy-AzureResourceGroup.ps1'
+    csmFileLink: '$(AzureFileCopy.StorageContainerUri)EnvironmentAzure/Devoir1ResourceGroup/Devoir1ResourceGroup\azuredeploy.json$(AzureFileCopy.StorageContainerSasToken)'
+    csmParametersFileLink: '$(AzureFileCopy.StorageContainerUri)EnvironmentAzure/Devoir1ResourceGroup/Devoir1ResourceGroup\azuredeploy.parameters.json$(AzureFileCopy.StorageContainerSasToken)'
+    deploymentMode: 'Incremental'
+    deploymentName: 'deploy devoir 1'
