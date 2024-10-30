@@ -41,7 +41,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'Devoir1'
     location: 'East US'
-    templateLocation: 'https://github.com/LouisSeranne/CloudUni-Devoir1/blob/master/EnvironmentAzure/Devoir1ResourceGroup/Devoir1ResourceGroup/Deploy-AzureResourceGroup.ps1'
+    templateLocation: 'Linked artifact'
     csmFileLink: '$(AzureFileCopy.StorageContainerUri)EnvironmentAzure/Devoir1ResourceGroup/Devoir1ResourceGroup\azuredeploy.json$(AzureFileCopy.StorageContainerSasToken)'
     csmParametersFileLink: '$(AzureFileCopy.StorageContainerUri)EnvironmentAzure/Devoir1ResourceGroup/Devoir1ResourceGroup\azuredeploy.parameters.json$(AzureFileCopy.StorageContainerSasToken)'
     deploymentMode: 'Incremental'
