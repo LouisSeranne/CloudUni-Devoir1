@@ -26,8 +26,8 @@ steps:
 
 - script: |
     echo $(CloudInitContent)
-    echo $(Build.SourcesDirectory)\AzureResourceGroup1\azuredeploy.json
-    echo $(Build.SourcesDirectory)\AzureResourceGroup1\azuredeploy.parameters.json
+    echo $(Build.SourcesDirectory)/AzureResourceGroup1/azuredeploy.json
+    echo $(Build.SourcesDirectory)/AzureResourceGroup1/azuredeploy.parameters.json
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
@@ -38,7 +38,7 @@ steps:
     resourceGroupName: 'Devoir1'
     location: 'East US'
     templateLocation: 'Linked artifact'
-    csmFile: '$(Build.SourcesDirectory)\AzureResourceGroup1\azuredeploy.json'
-    csmParametersFile: '$(Build.SourcesDirectory)\AzureResourceGroup1\azuredeploy.parameters.json'
+    csmFile: '$(Build.SourcesDirectory)/AzureResourceGroup1/azuredeploy.json'
+    csmParametersFile: '$(Build.SourcesDirectory)/AzureResourceGroup1/azuredeploy.parameters.json'
     overrideParameters: '-customData $(CloudInitContent)'
     deploymentMode: 'Incremental'
