@@ -10,8 +10,6 @@ pool: "Azure Pipelines"
 
 variables:
 - name: CloudInitContent
-- name: System.Debug  # Enable debug mode for detailed logging
-  value: true
 
 steps:
 - task: PowerShell@2
@@ -26,8 +24,6 @@ steps:
 
 - script: |
     echo $(CloudInitContent)
-    echo $(Build.SourcesDirectory)/AzureResourceGroup1/azuredeploy.json
-    echo $(Build.SourcesDirectory)/AzureResourceGroup1/azuredeploy.parameters.json
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
