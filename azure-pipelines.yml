@@ -10,7 +10,8 @@ pool: "Azure Pipelines"
 
 variables:
 - name: CloudInitContent
-- System.Debug: true
+- name: System.Debug  # Enable debug mode for detailed logging
+  value: true
 
 steps:
 - task: PowerShell@2
