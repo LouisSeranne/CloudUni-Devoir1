@@ -16,6 +16,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      Write-Host "Build Sources Directory: $(Build.SourcesDirectory)"
       $CloudContent = Get-Content -Path $(Build.SourcesDirectory)\AzureResourceGroup1\Cloud-init.txt -Raw
       Write-Host $CloudContent
       $encodedContent = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($CloudContent))
