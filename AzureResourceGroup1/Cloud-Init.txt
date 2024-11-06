@@ -24,18 +24,32 @@ write_files:
     path: /home/myapp/index.js
     defer: true
     content: |
-      var express = require('express')
-      var app = express()
-      var os = require('os');
+      var express = require('express');
+      var app = express();
       app.get('/', function (req, res) {
-        res.send('Hello World from host ' + os.hostname() + '!')
-      })
+        res.send(`
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bienvenue, voyageur !</title>
+          </head>
+          <body>
+            <h1>Bienvenue, voyageur !</h1>
+            <a href="https://github.com/LouisSeranne/CloudUni-Devoir1">Lien vers le GitHub</a><br/>
+            <a href="https://dev.azure.com/clouduni2024/Devoir%201">Lien vers le Board Azure</a><br/>
+            <iframe width="420" height="315" allow="autoplay" src="https://www.youtube.com/embed/-UYgORr5Qhg?autoplay=1"></iframe>
+          </body>
+          </html>
+        `);
+      });
       app.listen(3000, function () {
-        console.log('Hello world app listening on port 3000!')
-      })
+        console.log('App listening on port 3000!');
+      });
 runcmd:
   - service nginx restart
   - cd "/home/myapp"
-  - npm init
+  - npm init -y
   - npm install express -y
   - nodejs index.js
