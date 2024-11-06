@@ -10,6 +10,7 @@ pool: "Azure Pipelines"
 
 variables:
 - name: CloudInitContent
+- System.Debug: true
 
 steps:
 - task: PowerShell@2
