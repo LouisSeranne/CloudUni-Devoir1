@@ -26,6 +26,8 @@ steps:
 
 - script: |
     echo $(CloudInitContent)
+    echo $(Build.SourcesDirectory)\AzureResourceGroup1\azuredeploy.json
+    echo $(Build.SourcesDirectory)\AzureResourceGroup1\azuredeploy.parameters.json
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
